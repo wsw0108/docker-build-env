@@ -6,8 +6,7 @@ LABEL "maintainer"="wsw0108@qq.com"
 
 # RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
-RUN yum update -y && \
-yum install -y \
+RUN yum install -y \
 which less file \
 make \
 gcc gcc-c++ \
@@ -33,10 +32,11 @@ RUN PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH npm install -g yarn
 RUN PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH yarn global add node-gyp
 
 RUN useradd -m $user
+
 USER $user
 
 # RUN git config --global credential.helper 'cache --timeout 3600'
-RUN git config --global credential.helper 'store'
+# RUN git config --global credential.helper 'store'
 # RUN npm config set registry https://registry.npm.taobao.org/
 
 # Set environment variables.
