@@ -28,6 +28,8 @@ yum clean all
 
 RUN echo "source scl_source enable rh-nodejs8" > /etc/profile.d/enable-rh-nodejs8.sh
 
+COPY ../gitconfig /etc/gitconfig
+
 # install yarn & node-gyp
 RUN PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH npm install -g yarn
 RUN PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH yarn global add node-gyp
