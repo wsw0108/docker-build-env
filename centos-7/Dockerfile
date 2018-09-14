@@ -28,7 +28,7 @@ yum clean all
 
 RUN echo "source scl_source enable rh-nodejs8" > /etc/profile.d/enable-rh-nodejs8.sh
 
-COPY ../gitconfig /etc/gitconfig
+COPY gitconfig /etc/gitconfig
 
 # install yarn & node-gyp
 RUN PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH npm install -g yarn
@@ -38,8 +38,6 @@ RUN useradd -m $user
 
 USER $user
 
-# RUN git config --global credential.helper 'cache --timeout 3600'
-# RUN git config --global credential.helper 'store'
 # RUN npm config set registry https://registry.npm.taobao.org/
 
 # Set environment variables.
