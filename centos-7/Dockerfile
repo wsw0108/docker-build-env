@@ -6,7 +6,8 @@ LABEL "maintainer"="wsw0108@qq.com"
 
 # RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
-RUN yum install -y \
+RUN yum update -y && \
+yum install -y \
 which less file \
 make \
 gcc gcc-c++ \
