@@ -10,8 +10,8 @@ RUN yum install -y \
 which less file \
 make \
 gcc gcc-c++ \
-libstdc++-static libstdc++-static.i686 \
-glibc-devel.i686 libstdc++-devel.i686 \
+glibc-devel libstdc++-devel libstdc++-static \
+glibc-devel.i686 libstdc++-devel.i686 libstdc++-static.i686 \
 maven \
 golang \
 cairo cairo-devel libjpeg-turbo-devel pango pango-devel giflib-devel && \
